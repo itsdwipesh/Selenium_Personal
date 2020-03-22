@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="environment" value="local"/>
+  <parameter name="browserName" value="Chrome"/>
+  <listeners>
+    <listener class-name="com.d11.project.msd.listeners.TestListners"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" parallel="methods">
+    <classes>
+      <class name="com.d11.project.msd.masterTest.DemoTest">
+        <methods>
+          <include name="methodTearDown"/>
+          <include name="suiteTearDown"/>
+          <include name="testSetUp"/>
+          <include name="methodSetUp"/>
+          <include name="suiteSetUp"/>
+          <include name="test2"/>
+        </methods>
+      </class> <!-- com.d11.project.msd.masterTest.DemoTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
