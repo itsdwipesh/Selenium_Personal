@@ -28,7 +28,7 @@ public class Config {
 	public static final int MEDIUM_PAUSE = 30;
 	public static final int LARGE_PAUSE = 60;
 	public static final int XLARGE_PAUSE = 60;
-	public static final int POLLING_TIME = 2;
+	public static final int POLLING_TIME = 500;
 	
 	//File Paths
 	public static final String TEST_DATA_FILE_PATH = "";

@@ -53,7 +53,7 @@ public class DriverManagerUtil {
 					if (TestConfig.getBrowserName().equalsIgnoreCase("chrome")) {
 						System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\SeleniumServer\\chromedriver.exe");
 						System.setProperty("webdriver.chrome.silentOutput","true");
-						driver = new ChromeDriver(new ChromeOptions().merge(CapabilityUtil.getCapabilities()));
+						driver = new ChromeDriver(CapabilityUtil.getCapabilities());
 						}
 					}
 				}
