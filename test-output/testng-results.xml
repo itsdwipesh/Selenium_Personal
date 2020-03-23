@@ -2,42 +2,42 @@
 <testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="14946" started-at="2020-03-23T04:14:06Z" finished-at="2020-03-23T04:14:21Z">
+  <suite name="Suite" duration-ms="14613" started-at="2020-03-23T04:55:36Z" finished-at="2020-03-23T04:55:51Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="14946" started-at="2020-03-23T04:14:06Z" finished-at="2020-03-23T04:14:21Z">
+    <test name="Test" duration-ms="14613" started-at="2020-03-23T04:55:36Z" finished-at="2020-03-23T04:55:51Z">
       <class name="com.d11.project.msd.masterTest.DemoTest">
-        <test-method status="PASS" signature="suiteSetUp(org.testng.ITestContext)[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="suiteSetUp" is-config="true" duration-ms="128" started-at="2020-03-23T04:14:06Z" finished-at="2020-03-23T04:14:06Z">
+        <test-method status="PASS" signature="suiteSetUp(org.testng.ITestContext)[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="suiteSetUp" is-config="true" duration-ms="129" started-at="2020-03-23T04:55:36Z" finished-at="2020-03-23T04:55:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6dc17b83]]>
+                <![CDATA[org.testng.TestRunner@661972b0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteSetUp -->
-        <test-method status="PASS" signature="testSetUp(org.testng.ITestContext)[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="testSetUp" is-config="true" duration-ms="4" started-at="2020-03-23T04:14:06Z" finished-at="2020-03-23T04:14:06Z">
+        <test-method status="PASS" signature="testSetUp(org.testng.ITestContext)[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="testSetUp" is-config="true" duration-ms="15" started-at="2020-03-23T04:55:36Z" finished-at="2020-03-23T04:55:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6dc17b83]]>
+                <![CDATA[org.testng.TestRunner@661972b0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSetUp -->
-        <test-method status="PASS" signature="methodSetUp()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodSetUp" is-config="true" duration-ms="7292" started-at="2020-03-23T04:14:06Z" finished-at="2020-03-23T04:14:13Z">
+        <test-method status="PASS" signature="methodSetUp()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodSetUp" is-config="true" duration-ms="6306" started-at="2020-03-23T04:55:36Z" finished-at="2020-03-23T04:55:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method status="PASS" signature="methodSetUp()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodSetUp" is-config="true" duration-ms="6686" started-at="2020-03-23T04:14:06Z" finished-at="2020-03-23T04:14:13Z">
+        <test-method status="PASS" signature="methodSetUp()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodSetUp" is-config="true" duration-ms="6306" started-at="2020-03-23T04:55:36Z" finished-at="2020-03-23T04:55:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodSetUp -->
-        <test-method status="FAIL" signature="test2()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="test2" duration-ms="2149" started-at="2020-03-23T04:14:13Z" finished-at="2020-03-23T04:14:15Z">
+        <test-method status="FAIL" signature="test2()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="test2" duration-ms="4316" started-at="2020-03-23T04:55:42Z" finished-at="2020-03-23T04:55:47Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [true] but found [false]]]>
@@ -68,19 +68,19 @@ at java.lang.Thread.run(Unknown Source)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="test" duration-ms="6724" started-at="2020-03-23T04:14:13Z" finished-at="2020-03-23T04:14:20Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="test" duration-ms="7519" started-at="2020-03-23T04:55:42Z" finished-at="2020-03-23T04:55:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="methodTearDown()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodTearDown" is-config="true" duration-ms="4749" started-at="2020-03-23T04:14:15Z" finished-at="2020-03-23T04:14:20Z">
+        <test-method status="PASS" signature="methodTearDown()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodTearDown" is-config="true" duration-ms="1235" started-at="2020-03-23T04:55:48Z" finished-at="2020-03-23T04:55:49Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodTearDown -->
-        <test-method status="PASS" signature="methodTearDown()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodTearDown" is-config="true" duration-ms="910" started-at="2020-03-23T04:14:20Z" finished-at="2020-03-23T04:14:21Z">
+        <test-method status="PASS" signature="methodTearDown()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="methodTearDown" is-config="true" duration-ms="773" started-at="2020-03-23T04:55:50Z" finished-at="2020-03-23T04:55:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- methodTearDown -->
-        <test-method status="PASS" signature="suiteTearDown()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="suiteTearDown" is-config="true" duration-ms="205" started-at="2020-03-23T04:14:21Z" finished-at="2020-03-23T04:14:21Z">
+        <test-method status="PASS" signature="suiteTearDown()[pri:0, instance:com.d11.project.msd.masterTest.DemoTest@6eebc39e]" name="suiteTearDown" is-config="true" duration-ms="218" started-at="2020-03-23T04:55:51Z" finished-at="2020-03-23T04:55:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- suiteTearDown -->

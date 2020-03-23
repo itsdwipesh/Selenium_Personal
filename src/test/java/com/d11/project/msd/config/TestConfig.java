@@ -1,7 +1,5 @@
 package com.d11.project.msd.config;
 
-import java.util.Map;
-
 /**
  * @author Dwipesh Mishra
  * Class for Getting & Setting Constants

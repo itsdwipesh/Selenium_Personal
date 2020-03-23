@@ -13,7 +13,6 @@ public class ExtentManagerUtil {
 	public static String extentreportpath = "";
 	public static ThreadLocal<ExtentTest> exTest = new ThreadLocal<ExtentTest>();
 
-	//To avoid external initialization
 	private ExtentManagerUtil() {
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("MMddyyyy_ hh_mm_ss");

@@ -41,8 +41,11 @@ public class TestListners implements ITestListener, IAnnotationTransformer, ISui
 		String testcaseName =result.getMethod().getMethodName();
 		setTestcaseName(testcaseName);
 		setTestClassName(result.getMethod().getRealClass().getSimpleName());
-		ExtentManagerUtil.setExtentTest(ExtentManagerUtil.report.startTest(TestClassName+" - "+TestcaseName));
-		ExtentManagerUtil.logPass(TestClassName+" - "+TestcaseName+ " is started successfully");
+		
+		ExtentManagerUtil.setExtentTest(ExtentManagerUtil.report.startTest(TestcaseName));
+		ExtentManagerUtil.getExtTest().assignCategory(TestClassName);
+		
+		ExtentManagerUtil.logPass(TestcaseName+ " is started successfully");
 		
 	}
 

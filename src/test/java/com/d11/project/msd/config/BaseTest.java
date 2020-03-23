@@ -2,7 +2,6 @@ package com.d11.project.msd.config;
 
 import java.lang.reflect.Method;
 import org.testng.ITestContext;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -11,7 +10,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import com.d11.project.msd.commonUtils.DriverManagerUtil;
 import com.d11.project.msd.commonUtils.ExtentManagerUtil;
-import com.d11.project.msd.listeners.TestListners;
 
 /** 
  * @author Dwipesh Mishra
