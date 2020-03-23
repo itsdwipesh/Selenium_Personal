@@ -2,6 +2,7 @@ package com.d11.project.msd.commonUtils;
 
 import java.net.URL;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import com.d11.project.msd.config.Config;
@@ -29,28 +30,34 @@ public class DriverManagerUtil {
 	}
 	
 	/**
-	 * Initialize the Driver instance for the running session
-	 * @param capabilities {@link DesiredCapabilities} - The desired capabilities
+	 * Initialize the Driver instance for the running session 
 	 */
 	public static void initiateWebDriver() {
-		
+
 		if (getWebdriver() == null) {
 
 			try {
-				String url = Config.GRID_URL + "/wd/hub";
+				String url = null;
+				
 				switch (TestConfig.getEnvironment().toUpperCase()) {
-				case "LOCAL": {
+				
+				case "GRID":{
+					url = Config.GRID_URL + "/wd/hub";
+					driver = new RemoteWebDriver(new URL(url), CapabilityUtil.getCapabilities());
+					break;
+					}
+				
+				case "LOCAL": 
+				default:{
+
 					if (TestConfig.getBrowserName().equalsIgnoreCase("chrome")) {
 						System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\test\\resources\\SeleniumServer\\chromedriver.exe");
+						System.setProperty("webdriver.chrome.silentOutput","true");
+						driver = new ChromeDriver(new ChromeOptions().merge(CapabilityUtil.getCapabilities()));
 						}
 					}
 				}
-				if (TestConfig.getEnvironment().equalsIgnoreCase("LOCAL")) {
-					if (TestConfig.getBrowserName().equalsIgnoreCase("chrome"))
-						driver = new ChromeDriver(CapabilityUtil.getCapabilities());
-
-				} else
-					driver = new RemoteWebDriver(new URL(url), CapabilityUtil.getCapabilities());
+				
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -80,7 +87,7 @@ public class DriverManagerUtil {
 	/**
 	 * Start selenium grid server
 	 */
-	public static void startSeleniumGrid() {
+	private static void startSeleniumGrid() {
 		
 		String hubBatCommand = "start " + System.getProperty("user.dir") + "\\src\\test\\resources\\SeleniumServer\\SeleniumHubServer.bat" + " " + Config.GRID_HUB_PORT;
 		try {
@@ -95,7 +102,7 @@ public class DriverManagerUtil {
 	 * Start Local Node Server
 	 * @param - Name of JSON Config file under ConfigJson
 	 */
-	public static void startNode(String jsonConfigName) {
+	private static void startNode(String jsonConfigName) {
 		
 		String nodeBatCommand = "start " + Config.NODE_BAT_PATH + " " + Config.GRID_URL + "/grid/register " + System.getProperty("user.dir") + "\\src\\test\\resources\\ConfigJSON\\";
 		try {
@@ -113,6 +120,11 @@ public class DriverManagerUtil {
 	public static void stopSeleniumGrid() {
 		
 	}
+	
+	/**
+	 * Initialize selenium grid hub and node server
+	 * Takes the Node server config json from Config.LOCAL_NODE_JSONCONFIG 
+	 */
 
 	public static void initializeGrid() {
 		
